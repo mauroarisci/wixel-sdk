@@ -59,6 +59,12 @@ static uint8 nChannels[NUM_CHANNELS] = { 0, 100, 199, 209 };
 // store RF config in FLASH, and retrieve it from here to put it in proper location (also incidentally in flash).
 // this allows persistent storage of RF params that will survive a restart of the wixel (although not a reload of wixel app obviously).
 // TO-DO get this working with DMA - need to erase memory block first, then write this to it.
+
+// #define XDATA   __xdata
+// Specifies that the variable is stored in the Slow Access Ram section of the chip, also known as "External Ram". This is a good choice for large buffers or variables that don't need to be accessed quickly. The CC2511 has 3840 bytes of Slow Access Ram.
+// Definition at line 65 of file cc2511_types.h.
+//
+// RF_Params stand for "Radio Frequency Parameters"
 uint8 XDATA RF_Params[50];
 
 uint16 getRFParamOffset(unsigned char XDATA* pAddr)
