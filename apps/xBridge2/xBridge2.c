@@ -31,7 +31,7 @@ will send Dexcom packets from the specified Transmitter.
 The app uses the radio_queue libray to receive packets.  It does not
 transmit any packets.
 
-The input to this app is mostly on thw radio reciever.  It also accepts an anlogue input on pin P0_0 (referenced to ground)
+The input to this app is mostly on the radio reciever.  It also accepts an analogue input on pin P0_0 (referenced to ground)
 connected to any rechargeable battery being used to power the wixel, HM-10/11 etc.
 
 The output from this app takes the following format:
