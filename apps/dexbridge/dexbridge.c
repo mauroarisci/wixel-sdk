@@ -1005,8 +1005,16 @@ void LineStateChangeCallback(uint8 state)
 
 void main()
 {   
+	// Initializes the board's I/O lines, clock and other basic things. You will typically want to call this function at the very beginning of main() before you do anything else. This is a simple function which just calls several other initialization functions so you can look at the documentation of those other functions to find out exactly what this one does.
+	// This function calls:
+	// boardIoInit()
+	// boardClockInit()
+	// timeInit()
+	// dmaInit()
+	// Definition at line 29 of file board.c.	
 	systemInit();
-	//initialise Anlogue Input 0
+	
+	//initialise Analogue Input 0
 	P0INP = 0x1;
 	//initialise the USB port
 	usbInit();
