@@ -1015,7 +1015,9 @@ void main()
 	systemInit();
 	
 	//initialise Analogue Input 0
+	// Port 0 input-mode register I/O
 	P0INP = 0x1;
+	
 	//initialise the USB port
 	usbInit();
 	//initialise the dma channel for working with flash.
